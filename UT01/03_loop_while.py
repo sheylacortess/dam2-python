@@ -114,3 +114,18 @@ print("\nEjercicio 5:")
 # Pide al usuario que introduzca un número entero positivo N.
 # Imprime todos los números primos menores o iguales que N usando un bucle while.
 print("\nEjercicio 6:")
+
+numero = input (print("Dime un numero entero: "))
+isPrimo = false
+contador = 2
+while isPrimo == false or numero >contador :
+  numero /= 2
+  if numero % contador == 0 :
+    isPrimo = true
+    break
+  else: 
+    contador += 1
+if isPrimo == false :
+  print ("El numero no es primo")
+else :
+  print("el numeor es primo") ### esto esta mal revisar 
