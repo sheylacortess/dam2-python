@@ -7,40 +7,56 @@
 # Tarea: Modifica este código para evitar que el programa se bloquee. Usa un bloque try-except para capturar 
 # el error ZeroDivisionError y muestra un mensaje indicando que no se puede dividir por cero.
 print("\nEjercicio 1:")
-resultado = 10 / 0
 
+try:
+    resultado = 10 / 0
+except ZeroDivisionError as e: 
+    print("Errror no se puede dividir entre cero")
 
 # Ejercicio 2: Acceso a índice de lista fuera de rango Código.
 # lista = [1, 2, 3, 4, 5]
 # lista[10]
 #Usa un bloque try-except para capturar el error IndexError y muestra un mensaje al usuario indicando 
 # que el índice está fuera del rango de la lista.
+print("\nEjercicio 2:")
 lista = [1, 2, 3, 4, 5]
-elemento = lista[10]
-
+try: 
+    elemento = lista[10]
+except IndexError as e: 
+    print("No se puede imprimer, ese indice esta fuera del rango")
 
 # Ejercicio 3: Acceso a clave de diccionario inexistente Código.
 # colores = { 'rojo':'red', 'verde':'green', 'negro':'black' }
 # colores['blanco']
 #  Utiliza un bloque try-except para manejar la excepción KeyError que 
 # se produce al intentar acceder a la clave 'blanco', y muestra un mensaje de error apropiado.
+print("\nEjercicio 3:")
 colores = { 'rojo':'red', 'verde':'green', 'negro':'black' }
-colores['blanco']
-
+try: 
+    colores['blanco']
+except KeyError as e:
+    print("El color no es parte de los colores disponibles")
 
 # Error de tipo de dato
 # resultado = 15 + "20"
 # Escribe un bloque try-except para manejar el TypeError que ocurre al intentar sumar un entero con una cadena.
 print("\nEjercicio 4:")
-resultado = 15 + "20"
-
+try : 
+    resultado = 15 + "20"
+except TypeError:
+    print("Error: no s epuede dumer un numero entero con una cadena de texto")
 
 # Ejercicio 5: Validación de entrada con bucle 
 # Crea un bucle while que solicite repetidamente al usuario que ingrese un número. 
 # Utiliza un bloque try-except para capturar ValueError si el usuario ingresa algo que no es un número. 
 # El bucle debe continuar hasta que se ingrese un valor válido.
 print("\nEjercicio 5:")
-
+while True:
+    try: 
+        num = int(input("Introduce un numero: "))
+        break 
+    except ValueError: 
+        print(f"No has introdicido un numero valido.")
 
 
 # Ejercicio 6: Función que calcula la raíz cuadrada 
@@ -52,4 +68,14 @@ print("\nEjercicio 5:")
 # La función debe imprimir un mensaje de error o el resultado correcto si no hay ningún error.
 print("\nEjercicio 6:")
 import math
-
+def calcular_raiz_cuadradada(entrada):
+    try:
+        num = float(entrada)
+        if (num<0) : 1/0
+        print(f"La raiz cuadrada es : {math.sqrt(num)}")
+    except ValueError: 
+        print(f"Valor numerico")
+    except ZeroDivisionError:
+        print("Numero negativo inroducido")
+entrada = input("Introduce un numero: ")
+calcular_raiz_cuadradada(entrada)
