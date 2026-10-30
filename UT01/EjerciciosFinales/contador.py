@@ -19,5 +19,5 @@ try:
             print(i, end= " ")
         print("Terminado")
 except KeyboardInterrupt:
-    print("\nGracias por jugar")
+    print("\nGracias por jugar 😶‍🌫️")
         
